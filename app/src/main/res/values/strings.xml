@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Cine</string>
+    <string name="design">This app was designed by Manu"</string>
+    <string name="welcome">Welcome</string>
+    <string name="next">Next</string>
+    <string name="img">Image about app</string>
+    <string name="title_activity_dates">DatesActivity</string>
+    <string name="name">Name</string>
+    <string name="lastname">Lastname</string>
+    <string name="address">Address</string>
+    <string name="mail">Email</string>
+    <string name="phone">Phone</string>
+    <string name="zip">ZIP</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="genre">Genre</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="accept">Accept all terms and conditions</string>
+</resources>
