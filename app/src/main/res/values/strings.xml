@@ -16,5 +16,6 @@
     <string name="genre">Genre</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="empty">Empty</string>
     <string name="accept">Accept all terms and conditions</string>
 </resources>
