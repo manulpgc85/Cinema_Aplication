@@ -9,7 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class datesActivity extends AppCompatActivity {
     EditText editTextName;
@@ -21,7 +25,10 @@ public class datesActivity extends AppCompatActivity {
     EditText editTextPhone;
     EditText editTextZIP;
     EditText editTextEmail;
+    CheckBox terms;
     Activity contexto;
+    String genre = "female";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,24 @@ public class datesActivity extends AppCompatActivity {
 
         contexto = this;
 
+        RadioGroup sexSelected = (RadioGroup) findViewById(R.id.sexSelected);
+        sexSelected.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checked) {
+
+                switch (checked){
+                    case R.id.radioButton_male:
+                        genre = "Male";
+                        break;
+                    case R.id.radioButton_female:
+                        genre = "Female";
+                        break;
+                }
+                Toast.makeText(contexto,"You pushed " + genre, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
         editTextName = findViewById(R.id.editText_name);
         editTextLastname = findViewById(R.id.editText_lastname);
         editTextAddress = findViewById(R.id.editText_address);
@@ -39,6 +64,7 @@ public class datesActivity extends AppCompatActivity {
         editTextPhone = findViewById(R.id.editText_phone);
         editTextZIP = findViewById(R.id.editText_zip);
         editTextEmail = findViewById(R.id.editText_mail);
+        terms =findViewById(R.id.checkBox_terms);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +90,7 @@ public class datesActivity extends AppCompatActivity {
         String mail = editTextEmail.getText().toString();
         Intent intent = new Intent(contexto, ResultActivity.class);
 
+        intent.putExtra("genre",genre);
         intent.putExtra("name", name);
         intent.putExtra("lastname", lastname);
         intent.putExtra("address", address);
@@ -72,6 +99,8 @@ public class datesActivity extends AppCompatActivity {
         intent.putExtra("phone", phone);
         intent.putExtra("zip", zip) ;
         intent.putExtra("mail",mail);
+
+
         startActivity(intent);
     }
 }

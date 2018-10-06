@@ -43,5 +43,9 @@ public class ResultActivity extends AppCompatActivity {
         String mail = getIntent().getExtras().getString("mail");
         TextView mail_r = (TextView) findViewById(R.id.textView_r_mail_2);
         mail_r.setText(mail);
+
+        String genre = getIntent().getExtras().getString("genre");
+        TextView genre_r = (TextView) findViewById(R.id.textView_r_genre_2);
+        genre_r.setText(genre);
     }
 }

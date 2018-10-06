@@ -259,6 +259,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/sexSelected"
         android:layout_width="113dp"
         android:layout_height="88dp"
         android:layout_marginBottom="8dp"
@@ -275,7 +276,7 @@
         app:layout_constraintVertical_bias="0.744">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -283,7 +284,7 @@
             android:text="@string/female" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButton_male"
             android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -309,7 +310,7 @@
         app:layout_constraintVertical_bias="0.596" />
 
     <CheckBox
-        android:id="@+id/checkBox_c"
+        android:id="@+id/checkBox_terms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
