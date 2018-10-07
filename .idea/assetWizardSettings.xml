@@ -16,10 +16,37 @@
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="97" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="99" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\Manu\Desktop\Cine_Banner.png" />
-                                      <entry key="outputName" value="ic_cine" />
+                                      <entry key="backgroundImage" value="C:\Users\Manu\Downloads\Spirou_complete.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\Manu\Downloads\Spirou_complete.jpg" />
+                                      <entry key="outputName" value="ic_spirou_complete" />
                                     </map>
                                   </option>
                                 </PersistentState>

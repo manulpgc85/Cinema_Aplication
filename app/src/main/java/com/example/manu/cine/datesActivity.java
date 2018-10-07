@@ -19,11 +19,8 @@ public class datesActivity extends AppCompatActivity {
     EditText editTextName;
     EditText editTextLastname;
     EditText editTextAddress;
-    EditText editTextCountry;
-    EditText editTextCity;
     EditText editTextGenre;
     EditText editTextPhone;
-    EditText editTextZIP;
     EditText editTextEmail;
     CheckBox terms;
     Activity contexto;
@@ -59,10 +56,8 @@ public class datesActivity extends AppCompatActivity {
         editTextName = findViewById(R.id.editText_name);
         editTextLastname = findViewById(R.id.editText_lastname);
         editTextAddress = findViewById(R.id.editText_address);
-        editTextCountry = findViewById(R.id.editText_country);
-        editTextCity = findViewById(R.id.editText_city);
         editTextPhone = findViewById(R.id.editText_phone);
-        editTextZIP = findViewById(R.id.editText_zip);
+       // editTextZIP = findViewById(R.id.editText_zip);
         editTextEmail = findViewById(R.id.editText_mail);
         terms =findViewById(R.id.checkBox_terms);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -83,21 +78,17 @@ public class datesActivity extends AppCompatActivity {
         String name = editTextName.getText().toString();
         String lastname = editTextLastname.getText().toString();
         String address = editTextAddress.getText().toString();
-        String country = editTextCountry.getText().toString();
-        String city = editTextCity.getText().toString();
+
         String phone = editTextPhone.getText().toString();
-        String zip = editTextZIP.getText().toString();
+
         String mail = editTextEmail.getText().toString();
-        Intent intent = new Intent(contexto, ResultActivity.class);
+        Intent intent = new Intent(contexto, MoredatesActivity.class);
 
         intent.putExtra("genre",genre);
         intent.putExtra("name", name);
         intent.putExtra("lastname", lastname);
         intent.putExtra("address", address);
-        intent.putExtra("country",country);
-        intent.putExtra("city", city);
         intent.putExtra("phone", phone);
-        intent.putExtra("zip", zip) ;
         intent.putExtra("mail",mail);
 
 

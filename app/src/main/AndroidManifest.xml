@@ -25,7 +25,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.manu.cine.PrincipalActivity" />
         </activity>
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity
+            android:name=".MoredatesActivity"
+            android:label="@string/title_activity_moredates"
+            android:parentActivityName=".datesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.datesActivity" />
+        </activity>
     </application>
 
 </manifest>
