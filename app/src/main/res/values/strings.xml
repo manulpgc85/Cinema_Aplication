@@ -21,7 +21,6 @@
     <string name="datessigned">The dates signed are:</string>
     <!--App Validates Messages Resources-->
     <string name="fail_blank">Obligatory date</string>
-    <string name="fail_number">This date only just be a number</string>
     <!--App Date Page Resources-->
     <string name="title_activity_moredates">MoredatesActivity</string>
     <string name="zip">ZIP:</string>

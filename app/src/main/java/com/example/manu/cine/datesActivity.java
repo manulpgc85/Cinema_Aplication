@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ public class datesActivity extends AppCompatActivity {
     EditText editTextGenre;
     EditText editTextPhone;
     EditText editTextEmail;
-    CheckBox terms;
+
     Activity contexto;
     String genre = "female";
 
@@ -57,9 +58,8 @@ public class datesActivity extends AppCompatActivity {
         editTextLastname = findViewById(R.id.editText_lastname);
         editTextAddress = findViewById(R.id.editText_address);
         editTextPhone = findViewById(R.id.editText_phone);
-       // editTextZIP = findViewById(R.id.editText_zip);
         editTextEmail = findViewById(R.id.editText_mail);
-        terms =findViewById(R.id.checkBox_terms);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,10 +71,45 @@ public class datesActivity extends AppCompatActivity {
     }
 
     private void validate() {
-        irAResultado();
+        editTextName.setError(null);
+        editTextLastname.setError(null);
+        editTextAddress.setError(null);
+        editTextPhone.setError(null);
+        editTextEmail.setError(null);
+
+        String name = editTextName.getText().toString();
+        String lastname = editTextLastname.getText().toString();
+        String address = editTextAddress.getText().toString();
+        String phone = editTextPhone.getText().toString();
+        String mail = editTextEmail.getText().toString();
+
+        if(TextUtils.isEmpty(name) || name.trim().isEmpty()){
+            editTextName.setError(getString(R.string.fail_blank));
+            editTextName.requestFocus();
+            return;
+        }else if(TextUtils.isEmpty(lastname) || lastname.trim().isEmpty()){
+            editTextLastname.setError(getString(R.string.fail_blank));
+            editTextLastname.requestFocus();
+            return;
+            } else if(TextUtils.isEmpty(address) || address.trim().isEmpty()){
+                editTextAddress.setError(getString(R.string.fail_blank));
+                editTextAddress.requestFocus();
+                return;
+                }else if(TextUtils.isEmpty(mail) || mail.trim().isEmpty()){
+                    editTextEmail.setError(getString(R.string.fail_blank));
+                    editTextEmail.requestFocus();
+                    return;
+                    }else if(TextUtils.isEmpty(phone) || phone.trim().isEmpty()){
+                        editTextPhone.setError(getString(R.string.fail_blank));
+                        editTextPhone.requestFocus();
+                        return;
+                        }
+
+
+        goTOmore();
     }
 
-    private void irAResultado(){
+    private void goTOmore(){
         String name = editTextName.getText().toString();
         String lastname = editTextLastname.getText().toString();
         String address = editTextAddress.getText().toString();

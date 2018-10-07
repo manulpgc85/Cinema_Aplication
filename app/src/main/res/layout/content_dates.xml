@@ -20,10 +20,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889">
+        app:layout_constraintVertical_bias="0.936">
 
         <RadioButton
             android:id="@+id/radioButton_female"
@@ -81,7 +81,8 @@
             android:id="@+id/editText_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name" />
+            android:hint="@string/name"
+            android:inputType="textCapWords|textCapSentences" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -105,7 +106,8 @@
             android:id="@+id/editText_lastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/lastname" />
+            android:hint="@string/lastname"
+            android:inputType="textCapWords" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -128,7 +130,8 @@
             android:id="@+id/editText_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/address" />
+            android:hint="@string/address"
+            android:inputType="textCapWords" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout

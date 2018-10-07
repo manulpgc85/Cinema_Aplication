@@ -7,7 +7,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ public class MoredatesActivity extends AppCompatActivity {
     EditText editTextCountry;
     EditText editTextCity;
     EditText editTextZIP;
+    CheckBox Terms;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,7 @@ public class MoredatesActivity extends AppCompatActivity {
         editTextCountry = findViewById(R.id.editText_country);
         editTextCity = findViewById(R.id.editText_city);
         editTextZIP = findViewById(R.id.editText_zip);
+        Terms =findViewById(R.id.checkBox_terms);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -55,13 +60,44 @@ public class MoredatesActivity extends AppCompatActivity {
         String country = editTextCountry.getText().toString();
         String city = editTextCity.getText().toString();
         String zip = editTextZIP.getText().toString();
+
+
     }
 
     private void validate() {
-        goTomore();
+        String country = editTextCountry.getText().toString();
+        String city = editTextCity.getText().toString();
+        String zip = editTextZIP.getText().toString();
+
+
+        if(TextUtils.isEmpty(country) || country.trim().isEmpty()){
+            editTextCountry.setError(getString(R.string.fail_blank));
+            editTextCountry.requestFocus();
+            return;
+        }
+        else if(TextUtils.isEmpty(city) || city.trim().isEmpty()){
+            editTextCity.setError(getString(R.string.fail_blank));
+            editTextCity.requestFocus();
+            return;
+        } else if(TextUtils.isEmpty(zip) || zip.trim().isEmpty()){
+            editTextZIP.setError(getString(R.string.fail_blank));
+            editTextZIP.requestFocus();
+            return;
+             }
+        String accept = "false";
+        accept = (Terms.isChecked() ? "true" : "false");
+
+
+        if(accept.equals("false")){
+            Terms.setError(getString(R.string.fail_blank));
+            Terms.requestFocus();
+            return;
+        }
+
+        goToresult();
     }
 
-    private void goTomore() {
+    private void goToresult() {
 
         String country = editTextCountry.getText().toString();
         String city = editTextCity.getText().toString();
