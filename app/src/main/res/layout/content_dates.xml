@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:checked="true"
+            android:checked="false"
             android:text="@string/female" />
 
         <RadioButton
@@ -42,7 +42,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView_Genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

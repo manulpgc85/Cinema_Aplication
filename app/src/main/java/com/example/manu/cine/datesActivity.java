@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class datesActivity extends AppCompatActivity {
@@ -23,9 +24,10 @@ public class datesActivity extends AppCompatActivity {
     EditText editTextGenre;
     EditText editTextPhone;
     EditText editTextEmail;
-
+    RadioGroup sexSelected;
+    TextView textView_Genre;
     Activity contexto;
-    String genre = "female";
+    String genre = "null";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class datesActivity extends AppCompatActivity {
 
         contexto = this;
 
-        RadioGroup sexSelected = (RadioGroup) findViewById(R.id.sexSelected);
+        sexSelected = findViewById(R.id.sexSelected);
         sexSelected.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checked) {
@@ -59,6 +61,7 @@ public class datesActivity extends AppCompatActivity {
         editTextAddress = findViewById(R.id.editText_address);
         editTextPhone = findViewById(R.id.editText_phone);
         editTextEmail = findViewById(R.id.editText_mail);
+        textView_Genre= findViewById(R.id.textView_Genre);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +86,7 @@ public class datesActivity extends AppCompatActivity {
         String phone = editTextPhone.getText().toString();
         String mail = editTextEmail.getText().toString();
 
+
         if(TextUtils.isEmpty(name) || name.trim().isEmpty()){
             editTextName.setError(getString(R.string.fail_blank));
             editTextName.requestFocus();
@@ -104,7 +108,11 @@ public class datesActivity extends AppCompatActivity {
                         editTextPhone.requestFocus();
                         return;
                         }
-
+         if (genre.equals("null")){
+             textView_Genre.setError(getString(R.string.fail_blank));
+             textView_Genre.requestFocus();
+             return;
+        }
 
         goTOmore();
     }
