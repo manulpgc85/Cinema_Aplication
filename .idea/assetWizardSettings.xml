@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="97" />
+                                                <entry key="scalingPercent" value="71" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,7 +34,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="99" />
+                                                <entry key="scalingPercent" value="71" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -44,9 +44,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="C:\Users\Manu\Downloads\Spirou_complete.jpg" />
-                                      <entry key="foregroundImage" value="C:\Users\Manu\Downloads\Spirou_complete.jpg" />
-                                      <entry key="outputName" value="ic_spirou_complete" />
+                                      <entry key="backgroundImage" value="C:\Users\Manu\Downloads\red-round-glossy-icon-white-260nw-146170937.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\Manu\Downloads\red-round-glossy-icon-white-260nw-146170937.jpg" />
+                                      <entry key="outputName" value="ic_finish" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -60,6 +60,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>

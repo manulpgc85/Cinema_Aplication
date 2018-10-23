@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -21,7 +22,6 @@ public class datesActivity extends AppCompatActivity {
     EditText editTextName;
     EditText editTextLastname;
     EditText editTextAddress;
-    EditText editTextGenre;
     EditText editTextPhone;
     EditText editTextEmail;
     RadioGroup sexSelected;
@@ -125,6 +125,7 @@ public class datesActivity extends AppCompatActivity {
         String phone = editTextPhone.getText().toString();
 
         String mail = editTextEmail.getText().toString();
+
         Intent intent = new Intent(contexto, MoredatesActivity.class);
 
         intent.putExtra("genre",genre);
@@ -133,6 +134,7 @@ public class datesActivity extends AppCompatActivity {
         intent.putExtra("address", address);
         intent.putExtra("phone", phone);
         intent.putExtra("mail",mail);
+
 
 
         startActivity(intent);

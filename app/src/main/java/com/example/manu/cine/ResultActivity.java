@@ -1,16 +1,34 @@
 package com.example.manu.cine;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
-
+    Activity contexto;
+    Button button_more;
+    String country = "";
+    String city = "";
+    String zip = "";
+    String year = "";
+    String day = "";
+    String month = "";
+    String birth = "";
+    String ppv = "";
+    String kind = "";
+    String runname;
+    String runmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        contexto = this;
 
         String name = getIntent().getExtras().getString("name");
         TextView name_r= (TextView) findViewById(R.id.textView_result_name);
@@ -24,18 +42,6 @@ public class ResultActivity extends AppCompatActivity {
         TextView address_r = (TextView) findViewById(R.id.textView_result_address);
         address_r.setText(address);
 
-        String country = getIntent().getExtras().getString("country");
-        TextView country_r = (TextView) findViewById(R.id.textView_result_country);
-        country_r.setText(country);
-
-        String city = getIntent().getExtras().getString("city");
-        TextView city_r = (TextView) findViewById(R.id.textView_result_city);
-        city_r.setText(city);
-
-        String zip = getIntent().getExtras().getString("zip");
-        TextView zip_r = (TextView) findViewById(R.id.textView_result_zip);
-        zip_r.setText(zip);
-
         String phone = getIntent().getExtras().getString("phone");
         TextView phone_r = (TextView) findViewById(R.id.textView_result_phone);
         phone_r.setText(phone);
@@ -47,5 +53,35 @@ public class ResultActivity extends AppCompatActivity {
         String genre = getIntent().getExtras().getString("genre");
         TextView genre_r = (TextView) findViewById(R.id.textView_result_genre);
         genre_r.setText(genre);
+
+        country = getIntent().getExtras().getString("country");
+        city = getIntent().getExtras().getString("city");
+        zip = getIntent().getExtras().getString("zip");
+        year = getIntent().getExtras().getString("year");
+        month = getIntent().getExtras().getString("month");
+        day = getIntent().getExtras().getString("day");
+        birth = day + "/ " + month + "/ " +year;
+        ppv = getIntent().getExtras().getString("ppv");
+        kind= getIntent().getExtras().getString("kind");
+
+
+        button_more = (Button) findViewById(R.id.button_more);
+        button_more.setOnClickListener(new  View.OnClickListener(){
+            @Override
+                    public void onClick (View view){
+                Intent intent = new Intent(contexto, ResultActivity2.class);
+
+                intent.putExtra("country", country);
+                intent.putExtra("city", city);
+                intent.putExtra("zip", zip);
+                intent.putExtra("day",day);
+                intent.putExtra("month",month);
+                intent.putExtra("year", year);
+                intent.putExtra("ppv", ppv);
+                intent.putExtra("kind",kind);
+
+                startActivity(intent);
+            }
+        });
     }
 }

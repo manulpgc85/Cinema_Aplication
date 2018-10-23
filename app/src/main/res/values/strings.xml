@@ -1,9 +1,11 @@
 <resources>
     <!--App Basic Resources-->
     <string name="app_name">Cine</string>
+    <string name="welcome">Welcome</string>
     <!--App Main page Resources-->
     <string name="design">This app was designed by Manu"</string>
-    <string name="welcome">Welcome</string>
+    <string name="register">Register</string>
+    <string name="invite">Tour</string>
     <string name="next">Next</string>
     <string name="img">Image about app</string>
     <!--App Date Page Resources-->
@@ -19,7 +21,23 @@
     <!--App Result Page Resources-->
     <string name="empty">Empty</string>
     <string name="datessigned">The dates signed are:</string>
+    <string name="more">More Saved Dates</string>
+
+    <string name="payperview">Your favorite PPV platform is:</string>
+    <!--App More More Dates Page Resources-->
+    <string name="title_activity_more_more_dates">MoreMoreDatesActivity</string>
+    <string name="year">The year of your birth is:</string>
+    <string name="month">The month of your birth is:</string>
+    <string name="day">The day of your birth is:</string>
+
+    <string name="movistar">Movistar</string>
+    <string name="netflix">Netflix</string>
+    <string name="hbo">HBO</string>
+    <string name="amazon">Amazon</string>
+    <string name="vodafone">Vodafone</string>
+    <string name="title_activity_moremore_dates">MoremoreDatesActivity</string>
     <!--App Validates Messages Resources-->
+    <string name="minimum">You must select 3 kinds maximum</string>
     <string name="fail_blank">Obligatory date</string>
     <!--App Date Page Resources-->
     <string name="title_activity_moredates">MoredatesActivity</string>
@@ -27,4 +45,48 @@
     <string name="country">Country:</string>
     <string name="city">City:</string>
     <string name="accept">Accept all terms and conditions</string>
+    <!--App Result Page 2 Resources-->
+    <string name="birth">Birth:</string>
+    <string name="back">Come Back</string>
+    <!--App Common Resources-->
+    <string name="ppv">Your favorite PPV platform is:</string>
+    <string name="img_description">Spirou</string>
+    <!--App KindFilms Resources-->
+    <string name="title_activity_kind_films">KindFilmsActivity</string>
+    <string name="favorite">What is the kind of films that you like it?</string>
+    <string name="horror">Horror</string>
+    <string name="comedy">Comedy</string>
+    <string name="drama">Drama</string>
+    <string name="action">Action</string>
+    <string name="adventure">Adventure</string>
+    <string name="superheroes">Superheroes</string>
+    <string name="fantasy">Fantasy</string>
+    <string name="thriller">Thriller</string>
+    <string name="western">Western</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!--App freetour Resources-->
+    <string name="descriptionApp">Welcome to this new application, if you register you can enjoy the convenience of seeing from the palm of your hand:</string>
+    <string name="caracteristic">- All the movies that are now in theaters.\n - All dates of future releases in theaters.\n - The synopsis of all the films scheduled to be broadcast today by the different television channels\n - Rate your favorite movies</string>
+    <string name="finaldescriptionApp">All this and much more registering in this app.</string>
+    <!--App postlogin Resources-->
+    <string name="text">Congratulations, you have registered and your data has been saved correctly.\n\n
+Click on the end button to enjoy the application</string>
+    <string name="end">End</string>
+    <!--App Menu Resources-->
+    <string name="main">Main</string>
+    <string name="exit">Exit</string>
+    <string name="settings">Settings</string>
+    <string name="title_activity_fragment_comming_soon">fragmentCommingSoon</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_registered_app">RegisteredApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

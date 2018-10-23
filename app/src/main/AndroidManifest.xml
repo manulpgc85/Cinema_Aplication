@@ -35,6 +35,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.manu.cine.datesActivity" />
         </activity>
+        <activity
+            android:name=".MoremoreDatesActivity"
+            android:label="@string/title_activity_moremore_dates"
+            android:parentActivityName=".MoredatesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.MoredatesActivity" />
+        </activity>
+        <activity android:name=".ResultActivity2" />
+        <activity
+            android:name=".KindFilmsActivity"
+            android:label="@string/title_activity_kind_films"
+            android:parentActivityName=".MoremoreDatesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.MoremoreDatesActivity" />
+        </activity>
+        <activity android:name=".postRegister" />
+        <activity
+            android:name=".fragmentCommingSoon"
+            android:label="@string/title_activity_fragment_comming_soon"
+            android:parentActivityName=".RegisteredApp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.RegisteredApp" />
+        </activity>
+        <activity android:name=".freeTourActivity" />
+        <activity android:name=".welcomeActivity" />
+        <activity
+            android:name=".RegisteredApp"
+            android:label="@string/title_activity_registered_app"
+            android:parentActivityName=".welcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.welcomeActivity" />
+        </activity>
     </application>
 
 </manifest>

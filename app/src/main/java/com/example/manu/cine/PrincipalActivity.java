@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class PrincipalActivity extends AppCompatActivity {
-    Button welcome;
     Activity contexto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,13 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(intent);
         }
     });
-
+    Button invite = (Button) findViewById(R.id.button_invite);
+    invite.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent tour = new Intent (contexto, freeTourActivity.class);
+            startActivity(tour);
+        }
+    });
     }
 }

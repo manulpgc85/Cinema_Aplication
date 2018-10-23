@@ -24,7 +24,7 @@ public class MoredatesActivity extends AppCompatActivity {
     EditText editTextCountry;
     EditText editTextCity;
     EditText editTextZIP;
-    CheckBox Terms;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,8 @@ public class MoredatesActivity extends AppCompatActivity {
         editTextCountry = findViewById(R.id.editText_country);
         editTextCity = findViewById(R.id.editText_city);
         editTextZIP = findViewById(R.id.editText_zip);
-        Terms =findViewById(R.id.checkBox_terms);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +52,7 @@ public class MoredatesActivity extends AppCompatActivity {
 
 
 
-        name =getIntent().getExtras().getString("name");
+        name = getIntent().getExtras().getString("name");
         lastname = getIntent().getExtras().getString("lastname");
         address = getIntent().getExtras().getString("address");
         phone = getIntent().getExtras().getString("phone");
@@ -83,15 +84,6 @@ public class MoredatesActivity extends AppCompatActivity {
             editTextZIP.setError(getString(R.string.fail_blank));
             editTextZIP.requestFocus();
             return;
-             }
-        String accept = "false";
-        accept = (Terms.isChecked() ? "true" : "false");
-
-
-        if(accept.equals("false")){
-            Terms.setError(getString(R.string.fail_blank));
-            Terms.requestFocus();
-            return;
         }
 
         goToresult();
@@ -103,7 +95,7 @@ public class MoredatesActivity extends AppCompatActivity {
         String city = editTextCity.getText().toString();
         String zip = editTextZIP.getText().toString();
 
-        Intent intent = new Intent(contexto, ResultActivity.class);
+        Intent intent = new Intent(contexto, MoremoreDatesActivity.class);
 
         intent.putExtra("genre",genre);
         intent.putExtra("name", name);
