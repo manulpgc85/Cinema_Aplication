@@ -75,6 +75,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.manu.cine.welcomeActivity" />
         </activity>
+        <activity
+            android:name=".NoOnScreenActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".RegisteredApp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.RegisteredApp" />
+        </activity>
+        <activity
+            android:name=".noPpv"
+            android:label="@string/title_activity_no_ppv"
+            android:parentActivityName=".RegisteredApp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.manu.cine.RegisteredApp" />
+        </activity>
     </application>
 
 </manifest>

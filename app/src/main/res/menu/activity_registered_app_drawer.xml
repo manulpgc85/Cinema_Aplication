@@ -22,8 +22,16 @@
             android:title="Tools" />
         <item
             android:id="@+id/nav_commingSoon"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_film_roll"
             android:title="Comming Soon" />
+        <item
+            android:id="@+id/nav_onScreen"
+            android:icon="@drawable/ic_billete"
+            android:title="On Screen" />
+        <item
+            android:id="@+id/nav_ppv"
+            android:icon="@drawable/ic_ppv"
+            android:title="Platforms PPV" />
     </group>
 
     <item android:title="Communicate">

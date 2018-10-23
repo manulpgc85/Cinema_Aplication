@@ -86,7 +86,16 @@ Click on the end button to enjoy the application</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_registered_app">RegisteredApp</string>
 
+    <!--Sorry pages-->
+    <string name="sorryOnScreen">Sorry the page about on screen films is under contruction</string>
+    <string name="sorryPpv">Sorry the page about Pay Per View platforms is under contruction</string>
+
+    <!--Registered pages-->
+
+    <string name="aclaration">You only need push the button with three horizontal lines for go to the parts of this App</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_no_ppv">noPpv</string>
 
 </resources>
